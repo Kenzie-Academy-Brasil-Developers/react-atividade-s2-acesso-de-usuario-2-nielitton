@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { members } from "../Members";
+import { members } from "../../components/Members";
 
 function Home() {
   return members.map((member) => <Link key={member.id} to={member.type === "pj" ? `/company/${member.id}` : `/customer/${member.id}`}>{member.name}</Link>);
